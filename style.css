@@ -102,7 +102,7 @@ body {
 }
 .btn-kotak:hover { background: var(--teks-putih); color: var(--bg-gelap); }
 
-/* BAGIAN FULL FOTO (DIHALUSKAN BIAR GAK JADI KOTAK) */
+/* BAGIAN FULL FOTO */
 .section-full { 
     position: relative; 
     width: 100%; 
@@ -118,7 +118,7 @@ body {
     filter: brightness(40%) saturate(80%); 
 }
 
-/* GRADASI HITAM BAWAH (DITURUNIN DIKIT BIAR FOTO LEBIH DOMINAN) */
+/* GRADASI HITAM BAWAH */
 .overlay-gradien-bawah { 
     position: absolute; 
     bottom: 0; 
@@ -212,3 +212,37 @@ body {
 .btn-salin { position: absolute; right: 20px; top: 50%; transform: translateY(-50%); background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); border-radius: 5px; padding: 8px; cursor: pointer; transition: 0.3s; display: flex; align-items: center; justify-content: center;}
 .btn-salin:hover { background: var(--teks-putih); }
 .btn-salin:hover svg { fill: var(--bg-gelap); }
+
+/* =========================================
+   STYLE TAMBAHAN NAVBAR & LOGO (NEW!)
+========================================= */
+.navbar {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    padding: 15px 20px;
+    background: rgba(22, 22, 22, 0.85);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 100;
+    text-align: center;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.logo-text {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: var(--teks-putih);
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+
+.logo-text span {
+    font-family: 'Alex Brush', cursive;
+    font-size: 2.2rem;
+    color: var(--aksen-emas);
+    margin: 0 8px;
+    vertical-align: middle;
+}
