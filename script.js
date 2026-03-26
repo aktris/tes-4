@@ -51,7 +51,7 @@ function salinTeks(teks, btn) {
     });
 }
 
-// RSVP
+// RSVP Form Submit
 const form = document.forms['submit-ke-google-sheet'];
 const btnKirim = document.getElementById('tombol-kirim');
 if (form) {
@@ -78,4 +78,24 @@ if (form) {
           setTimeout(() => { btnKirim.innerHTML = 'KIRIM KONFIRMASI'; btnKirim.style.pointerEvents = 'auto'; }, 3000);
         });
     });
+}
+
+// ==========================================
+// FITUR GANTI NAMA TAMU OTOMATIS DARI LINK
+// ==========================================
+const urlParams = new URLSearchParams(window.location.search);
+const namaTamu = urlParams.get('to');
+
+if (namaTamu) {
+    // 1. Ganti teks di layar depan (Cover)
+    const teksNamaTamu = document.getElementById('nama-tamu-teks');
+    if (teksNamaTamu) {
+        teksNamaTamu.innerText = namaTamu;
+    }
+    
+    // 2. Otomatis ngisi nama di kolom Form RSVP
+    const inputNamaRSVP = document.querySelector('input[name="nama"]');
+    if (inputNamaRSVP) {
+        inputNamaRSVP.value = namaTamu;
+    }
 }
